@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import { Virtuoso } from "react-virtuoso";
 
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -8,18 +9,29 @@ import { VirtualScrollCard } from "../components/virtual_scroll/virtual_scroll_c
 const items = [...Array(1000)];
 const itemsCol = [...Array(8)];
 
-const VirtualScroll: NextPage = () => {
+const VirtualScrollVirtuoso: NextPage = () => {
   return (
     <>
       <VirtualScrollHeader />
 
-      <div className="container-xxl">
-        <div>
-          <div style={{ height: "100%", width: "100%", position: "relative" }}>
-            {items.map((_, indexY) => (
+      <div className="container-xxl" style={{}}>
+        <div
+          style={{
+            position: "absolute",
+            height: "100%",
+            top: 0,
+            bottom: 0,
+            right: 0,
+            left: 0,
+          }}
+        >
+          <Virtuoso
+            style={{ height: "100%", width: "100%" }}
+            totalCount={items.length}
+            itemContent={(indexY) => (
               <div className="row" key={indexY}>
                 {itemsCol.map((_, indexX) => (
-                  <div className="col" key={indexX}>
+                  <div className="col">
                     <VirtualScrollCard
                       posX={indexX}
                       posY={indexY}
@@ -30,12 +42,12 @@ const VirtualScroll: NextPage = () => {
                   </div>
                 ))}
               </div>
-            ))}
-          </div>
+            )}
+          />
         </div>
       </div>
     </>
   );
 };
 
-export default VirtualScroll;
+export default VirtualScrollVirtuoso;
