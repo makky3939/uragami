@@ -1,0 +1,19 @@
+.background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgb(252, 68, 87);
+    padding: 16px;
+}
+
+.text {
+    font-size: 12em;
+    font-weight: bold;
+    color: rgb(14, 24, 33);
+    font-family: sans-serif;
+}
+
+.borderBox {
+    border: 1px #fff solid;
+    padding: 16px;
+}
