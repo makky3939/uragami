@@ -10,6 +10,7 @@ const ValorantTimeout: NextPage = () => {
         <div className={styles.text}>{text}</div>
         <div className={styles.text}>{text}</div>
         <div className={styles.text}>{text}</div>
+        <div className={`${styles.text} ${styles.text_right}`}>{text}</div>
         <div className={styles.text}>{text}</div>
       </div>
     </div>
