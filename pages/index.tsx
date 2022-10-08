@@ -15,6 +15,9 @@ const Home: NextPage = () => {
           <li>
             <a href="/virtual_scroll" className='btn btn-link'>virtual scroll</a>
           </li>
+          <li>
+            <a href="/valorant_timeout" className='btn btn-link'>valorant timeout</a>
+          </li>
         </ul>
       </div>
     </div>
