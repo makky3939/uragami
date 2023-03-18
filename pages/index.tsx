@@ -27,6 +27,11 @@ const Home: NextPage = () => {
               Ellipse drops
             </a>
           </li>
+          <li>
+            <a href="random_walk" className="btn btn-link">
+              Random walk
+            </a>
+          </li>
         </ul>
       </div>
     </div>
